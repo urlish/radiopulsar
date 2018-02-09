@@ -1,0 +1,22 @@
+<div class="post" ng-repeat="x in bookNews | filter: {format: 'standard'} as countstan ">
+	<div class="post-standard" >
+		<div class="news-share" ng-show="show">
+			<p ng-click="share(x.link)" class="sharebook">{{'share' | translate}}</p>
+			<div ng-click="show=!show"><p ng-click="removeNews(x.id)" class="removebook">{{'remove' | translate }}</p></div>
+		</div>
+		<div class="icon-news-share" ng-init="show=false" ng-click="show=!show"><i class="icon-navigationmenu"></i></div>
+		<div class="title-post">
+			<h4><a ng-href="#/app/details/{{x.id}}" ng-bind-html="x.title.rendered"></a></h4>
+				<span class="time-before" ng-if="!app_direction">{{x.date_gmt | datePost}}</span><span class="total-view">{{x.mobiconnector_total_views}}<i class="icon-view"></i></span><span class="total-comment">{{x.mobiconnector_total_comments.total_comments}}<i class="icon-comment"></i></span>
+		</div>
+		<div class="img-post" ng-if="x.mobiconnector_feature_image.mobiconnector_large!=null">
+				<a ng-href="#app/details/{{x.id}}"><img ng-src={{x.mobiconnector_feature_image.mobiconnector_large}}></a>
+		</div>
+		<div class="img-post" ng-if="x.mobiconnector_feature_image.mobiconnector_large==null">
+				<a ng-href="#app/details/{{x.id}}"><img ng-src='img/no_images.png'></a>
+		</div>
+	</div>
+</div>
+<div class="col absolute" style="text-align:center; top:200px" ng-show="countstan.length == 0 || include == ''">
+	<span style="font-size: 19px; color: #a2a2a2;"><i class="icon-bookmark"></i>{{'nobookmark' | translate}}</span>
+</div>

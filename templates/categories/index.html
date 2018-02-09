@@ -1,0 +1,76 @@
+<ion-view title="">
+    <ion-header-bar class="bar bar-stable bar-header">
+        <button class="button button-clear icon-arrow" ng-click="comeBack()""></button>
+        <div class="title" ng-bind-html="dataCate.name"></div>
+        <div class="buttons">
+        <button class="button button-clear icon-search" ui-sref="app.search"></button>
+        <button class="button button-clear icon-subcategory" menu-toggle="right" ng-if="e"></button>
+        </div>
+      
+    </ion-header-bar>
+    <ion-content class="has-header categories">
+		<ion-refresher pulling-icon="ion-refresh" on-refresh="doRefresh()" spinner="none"></ion-refresher>
+		<div class="text-center padding" ng-show="refreshing"><ion-spinner></ion-spinner></div>
+        <div class="post" ng-repeat="x in data1" ng-if="x" ng-class="{toppost:$first}">
+            <a ng-href="#app/details/{{x.id}}">
+                <div ng-if="x.format=='standard'">
+                    <div class="img-post-standard" ng-if="x.mobiconnector_feature_image.mobiconnector_large==null">
+                        <img ng-src="img/no_images.png">
+                    </div>
+                    <div class="img-post-standard" ng-if="x.mobiconnector_feature_image.mobiconnector_large!=null">
+                        <img ng-src="{{x.mobiconnector_feature_image.mobiconnector_large}}">
+                    </div>
+                    <div class="title-post-standard">
+                        <h4 ng-bind-html="x.title.rendered"></h4>
+                        <span class="time-before" ng-if="!app_direction">{{x.date_gmt | datePost}}</span><span class="total-view">{{x.mobiconnector_total_views}}<i class="icon-view"></i></span><span class="total-comment">{{x.mobiconnector_total_comments.total_comments}}<i class="icon-comment"></i></span>
+                    </div>
+                </div>
+            </a>
+            <div ng-if="x.format=='video'">
+                <div class="latest-video">
+                    <div class="img-video">
+                        <div class="button-play">
+                            <a ng-href="#app/details/{{x.id}}">
+                                <button class="button-icon"><i class="icon-play"></i></button>
+                            </a>
+                        </div>
+                        <a ng-href="#app/details/{{x.id}}">
+                            <img ng-src={{x.mobiconnector_feature_image.mobiconnector_large}}>
+                            <img ng-src="img/no_images.png" ng-if="x.mobiconnector_feature_image.mobiconnector_large==null">
+                        </a>
+                    </div>
+                </div>
+                <div class="title-latest-video">
+                    <a ng-href="#app/details/{{x.id}}"><h4 ng-bind-html="x.title.rendered"></h4></a>
+                </div>
+            </div>
+            <div class="post-no-image" ng-if="x.format=='aside'">
+                <div class="">
+                    <h4 ng-bind-html="x.title.rendered"><a ng-href="#app/details/{{x.id}}"></a></h4>
+                </div>
+                <div class="expert">
+                    <a ng-href="#app/details/{{x.id}}">
+                        <p ng-bind-html="x.excerpt.rendered"></p>
+                    </a>
+                </div>
+                <span class="time-before">{{x.date_gmt | datePost}}</span><span class="total-view">{{x.mobiconnector_total_views}}<i class="icon-view"></i>
+            </span><span class="total-comment">{{x.mobiconnector_total_comments.total_comments}}<i class="icon-comment"></i></span>
+            </div>
+            <div class="latest-slide" ng-if="x.format=='gallery' || x.format=='image'">
+                <a ng-href="#app/slidebox/{{x.id}}">
+                   <img ng-src="{{x.mobiconnector_feature_image.mobiconnector_large || 'img/no_images.png'}}">
+                </a>
+                <div class="title-latest-slide">
+                    <a ng-href="#app/slidebox/{{x.id}}"><h4 ng-bind-html="x.title.rendered"></h4></a>
+                </div>
+                <div class="start-slideshow">
+                    <a ng-href="#app/slidebox/{{x.id}}">
+                        <button class="button-icon"><i class="icon-slideshowimage"></i><span>{{'slide' | translate}}</span></button>
+                    </a>
+                </div>
+                </a>
+            </div>
+        </div>
+         <ion-infinite-scroll ng-if="!over" on-infinite="loadMore()"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,164 @@
+.profile{
+	margin-top: 30%;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.nav-profile{
+	background: #ededed !important;
+	color: black;
+}
+.profile input[type="text"]{
+	border-bottom: 1px solid #6bb8b8;
+	width: 90%;
+}
+.profile button{
+	font-weight: bold;
+	margin-top: 50px;
+}
+.profile .button.button-block{
+	margin-top: 50px;
+}
+.profile span{
+	color: #6bb8b8;
+	padding-top: 20px;
+}
+.full-name{
+	display: block;
+	padding-top: 20px;
+}
+.profile p{
+	text-align: center;
+}
+.profile .icon-avata{
+	font-size: 50px;
+	display: block;
+	position: absolute;
+	top: 30%;
+	left: 25%;
+}
+.icon-profile{
+	text-align: center;
+	background: #ededed;
+	border-radius: 100%;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	position: relative;
+
+}
+.profile .icon-edit{
+	font-size: 20px;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	color: white;
+}
+.edit-avata{
+	position: absolute;
+	margin-top: 20px;
+	margin-left: 60px;
+	background: #6bb8b8;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	right: -10px;
+	bottom: 0px;
+}
+.image-profile img{
+	border-radius: 100%;
+}
+/*-------------------changeemail-----------------*/
+.changemail{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.changemail input[type="email"]{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+}
+.changemail input[type="email"].ng-not-empty{
+		border-bottom: 1px solid #6bb8b8;
+
+}
+.changemail input[type="password"]{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+}
+.changemail input[type="password"].ng-not-empty{
+		border-bottom: 1px solid #6bb8b8;
+		}
+.changemail .button.button-block{
+	margin-top: 50px;
+	color: white;
+}
+/*----------------changepass-------------*/
+.changepass{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.changpass{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.changepass input[type="text"]{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+	background: #f9f9f9;
+	border-radius: 5%;
+}.changepass input[type="email"]{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+	background: #f9f9f9;
+	border-radius: 5%;
+	border-bottom: 1px solid #009788;
+}
+.changepass input[type="password"]{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+	background: #f9f9f9;
+	border-radius: 5%;
+}
+.changepass .button.button-block{
+	margin-top: 50px;
+}
+.loading{
+	background: white!important;
+	color: #838186;
+}
+.loading span{
+	color: #838186;
+	display: block;
+	float: right;
+	margin-top: 10%;
+}
+/*---------------------------Forgot---------------------*/
+.forgotpass{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+.forgotpass input[type="email"]{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+	border-bottom: 1px solid #6bb8b8;
+
+}
+.forgotpass .button.button-block{
+	margin-top: 50px;
+	color: white;
+}

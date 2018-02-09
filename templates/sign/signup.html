@@ -1,0 +1,28 @@
+<ion-view>
+<ion-nav-bar class="bar bar-stable">
+<ion-nav-title>{{'signup' | translate}}</ion-nav-title>
+<ion-nav-buttons side="left"><button class=" button button-clear icon-arrow button-arrow" ng-click="comeBack()"></button></ion-nav-buttons>
+</ion-nav-bar>
+<ion-content>
+<div class="signup" >
+	<form name="myForm">
+		<span>{{'fullname' | translate}}</span>
+		<input type="text" ng-model="signup.name" name="" ng-keyup="show1 = false"></input>
+		<div><span ng-if="signup.name.length <= 3" style="color: red;">{{'charactor' | translate}}</span><div>
+		<span style="color: red" ng-show="show1" class="span-erorr">{{'namevalid' | translate}}</span>
+		<span>{{'username'|translate}}</span>
+		<input type="text" ng-model="signup.username" name="username" ng-change="change(signup.username)"></input>
+		<span style="color: red" ng-show="show4" ng-init="s = true" class="span-erorr">{{'usernameInvalid'|translate}}</span>
+		<span>{{'Email' | translate}}</span>
+		<input type="email" ng-model="signup.email" name="email" ng-change="change(signup.email)"></input>
+		<span style="color: red" ng-show="myForm.email.$invalid || show2" ng-init="s = true" class="span-erorr">{{'Emailinvalid' | translate}}</span>
+		<span>{{'pass' | translate}}</span>
+		<input type="password" ng-model="signup.pass" ng-change="change1(signup.pass)"></input>
+		<span style="color: red" ng-show="show3" class="span-erorr">{{'Passwordinvalid' | translate}}</span>
+	</form>
+	<button class="button button-block button-sign" ng-click="signUp()" ng-disabled="myForm.$invalid">{{'signup' | translate}}</button>
+	<a ng-href="#app/signin"><p>{{'member' | translate}}</p></a>
+</div>
+
+</ion-content>
+</ion-view>

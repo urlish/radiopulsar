@@ -1,0 +1,57 @@
+
+	<!--//////////////////////start///////////////////////////////////////-->
+	<div class="post" ng-repeat="x in topFeature" ng-class="{toppost:$first}" ng-if="x">
+			<a ng-href="#app/details/{{x.id}}">
+			<div ng-if="x.format=='standard'">
+			<div class="img-post-standard" ng-if="x.mobiconnector_feature_image.mobiconnector_large==null">
+					<img ng-src="img/no_images.png" >
+				</div>
+				<div class="img-post-standard" ng-if="x.mobiconnector_feature_image.mobiconnector_large!=null">
+					<img ng-src="{{x.mobiconnector_feature_image.mobiconnector_large}}">
+				</div>
+				
+				<div class="title-post-standard">
+					<h4 ng-bind-html="x.title.rendered"></h4>
+					<span class="time-before" ng-if="!app_direction">{{x.date_gmt | datePost}}</span><span class="total-view">{{x.mobiconnector_total_views}}<i class="icon-view"></i></span><span class="total-comment">{{x.mobiconnector_total_comments.total_comments}}<i class="icon-comment"></i></span>
+				</div>
+			</div>
+			</a>
+			<div ng-if="x.format=='video'">
+			<div class="latest-video">
+				<div class="img-video">
+				<div class="button-play"><a ng-href="#app/details/{{x.id}}"><button class="button-icon"><i class="icon-play"></i></button>
+				</div>
+				<a ng-href="#app/details/{{x.id}}">
+				<img ng-src={{x.mobiconnector_feature_image.mobiconnector_large}}>
+				<img ng-src="img/no_images.png" ng-if="x.mobiconnector_feature_image.mobiconnector_large==null">
+				</a>
+				</div>
+			</div>
+			<div class="title-latest-video">
+				<a ng-href="#app/details/{{x.id}}"><h4 ng-bind-html="x.title.rendered"></h4></a>
+			</div>
+			</a>
+		</div>
+		
+		<div class="post-no-image" ng-if="x.format=='aside'">
+			<div class="">
+				<h4><a ng-href="#app/details/{{x.id}}" ng-bind-html="x.title.rendered"></a></h4>
+			</div>
+			<div class="expert">
+				<a ng-href="#app/details/{{x.id}}"><p ng-bind-html="x.excerpt.rendered"></p></a>
+			</div>
+			<span class="time-before" >{{x.date_gmt | datePost}}</span><span class="total-view">{{x.mobiconnector_total_views}}<i class="icon-view"></i>
+			</span><span class="total-comment">{{x.mobiconnector_total_comments.total_comments}}<i class="icon-comment"></i></span>
+		</div>
+		<div class="latest-slide" ng-if="x.format=='gallery' || x.format=='image'">
+		<a ng-href="#app/slidebox/{{x.id}}">
+			<img ng-src={{x.mobiconnector_feature_image.mobiconnector_large}}>
+			<div class="title-latest-slide">
+				<h4><a ng-href="#app/slidebox/{{x.id}}" ng-bind-html="x.title.rendered"></a></h4>
+			</div>
+		<div class="play-slide"><a ng-href="#app/slidebox/{{x.id}}"><button class="button-icon"><i class="icon-slideshowimage"></i><span>START SLIDESHOW</span></button></a></div>
+		</a>
+		</div>
+	</div>
+	<ion-infinite-scroll ng-if="!over" on-infinite="loadMore()">
+	</ion-infinite-scroll>

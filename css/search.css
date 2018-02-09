@@ -1,0 +1,36 @@
+
+.input-search{
+	background: #006aa0 !important;
+}
+.input-search input[type="text"]{
+		color: #fff;
+
+}
+#button-search{
+	position: absolute;
+	right: 5px;
+}
+/*------------------Recent-Search-----------------*/
+.recent-search li{
+	padding: 10px;
+}
+.recent-search span{
+	margin-left: 45%;
+}
+.recent-search p{
+	opacity: 0.4;
+}
+/*-------------result search--------------------------*/
+.result-search li {
+	padding: 10px;
+	padding-left: 10px;
+}
+.result-search ul li  i {
+	padding-right: 10px;
+	opacity: 0.5;
+}
+/*----------------No result-----------------------*/
+.no-result p{
+	text-align: center;
+	margin-top: 10%;
+}

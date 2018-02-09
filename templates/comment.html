@@ -1,0 +1,29 @@
+<ion-view>
+<link rel="stylesheet" type="text/css" href="css/comment.css">
+	<ion-header-bar class="bar bar-header bar-stable">
+		<button class="button button-clear icon-arrow button-arrow" ng-click="comeBack()"></button>
+		<div class="title">{{titleComment}}</div>
+	</ion-header-bar>
+	<ion-content class="has-footer">
+	<div class="comment has-footer has-header" ng-repeat="x in dataComment">
+		<div class="pointcomment"><i class="icon-pointcomment"></i></div>
+		<div class="avata" ng-if="x.mobiconnector_local_avatar!=undefined">
+			<img ng-src={{x.mobiconnector_local_avatar}}>
+		</div> 
+		<div class="no-avata-comment" ng-if="x.mobiconnector_local_avatar==undefined">
+			<img ng-src="img/no_avata.png">
+		</div>
+		<div class="content-comment">
+			<p class="author-comment">{{x.author_name}}</p>
+			<div class="main-comment" ng-bind-html="x.content.rendered"></div>
+			<div class="time-comment"><span style="opacity:0.5" >{{x.date_gmt | datePost}}</span></div>
+		</div>
+	</div>
+
+		
+	</ion-content>
+		<ion-footer-bar keyboard-attach class="footer-comment">
+			<input style="width: 120% !important" type="text" name="" placeholder="Type your comment" ng-model="dataSend">
+			<i class="ion-android-send comment-icon buttons-right" style="font-size: 1.5em;padding-right: 10px;opacity: 0.5" ng-click="sendComment()"></i>
+		</ion-footer-bar>
+</ion-view>

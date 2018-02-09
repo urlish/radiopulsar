@@ -1,0 +1,22 @@
+.content-notifidetails{
+	background: #f7f7f7;
+}
+.details-notifi{
+	padding-left: 20px;
+	padding-right: 10px;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	margin-left: 15px;
+	margin-right:10px;
+	margin-top: 20px;
+	background: white;
+	width: 90%;
+	height: auto;
+}
+.notifi-detele{
+	padding-top: 40px;
+	padding-left: 50px;
+}
+.notifi-user{
+	color: blue;
+}

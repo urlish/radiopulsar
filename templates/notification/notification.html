@@ -1,0 +1,53 @@
+<ion-view>
+<link rel="stylesheet" type="text/css" href="css/notifi.css">
+<ion-header-bar class="bar-stable">
+	<div class="buttons buttons-right">
+	<button class="button icon-arrow button-clear button-arrow " ui-sref="app.home"></button>
+	</div>
+	<div class="title">{{'notification' | translate}}</div>
+	<div class="buttons allow-notifi buttons-right ">
+		<ion-toggle ng-model="allow" toggle-class="toggle-assertive" ng-click="allowNotifi(allow)"></ion-toggle>
+	</div>
+</ion-header-bar>
+<ion-content style="background: #f7f7f7" class="has-header">
+<div ng-repeat="x in data | limitTo:20:1" >
+<div class="notification row"  ng-if="x.type=='3'">
+	<div class="notifi-item col-75">
+		<a ng-href="#app/detailsNotifi/{{x.id}}">
+
+		<div class="content-notifi"><p>{{x.title}}</p></div>
+			</a>
+	</div>
+	<div class="notifi-time col-25">
+		<p style="text-align:center">{{x.date | dateComment}}</p>
+		<label ng-click="confirm(x.id)"><i class="icon icon-detele" ></i></label>
+	</div>
+</div>
+<div class="notification row"  ng-if="x.type=='1'">
+	<div class="notifi-item col-75">
+		<a ng-href="#app/details/{{x.idPost}}">
+
+		<div class="content-notifi"><p>{{x.title}}</p></div>
+			</a>
+	</div>
+	<div class="notifi-time col-25">
+		<p style="text-align:center">{{x.date | dateComment}}</p>
+		<label ng-click="confirm(x.id)"><i class="icon icon-detele" ></i></label>
+	</div>
+</div>
+<div class="notification row"  ng-if="x.type=='2'">
+	<div class="notifi-item col-75">
+		<a ng-href="#app/categories/{{x.idCategory}}">
+
+		<div class="content-notifi"><p>{{x.title}}</p></div>
+			</a>
+	</div>
+	<div class="notifi-time col-25">
+		<p style="text-align:center">{{x.date | dateComment}}</p>
+		<label ng-click="confirm(x.id)"><i class="icon icon-detele" ></i></label>
+	</div>
+</div>
+</div>
+<div class="no-notifi" ng-if="data.length == 1"><p>{{'currently' | translate}}</p></div>
+</ion-content>
+</ion-view>

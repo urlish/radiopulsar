@@ -1,0 +1,15 @@
+<div class="row"  style="flex-wrap:wrap">
+	<div ng-repeat="x in bookNews | filter: {format: 'video'} as countvideo " class="col col-50 book-video" ui-sref="app.details({idPost:x.id})">
+		<div class="item-video-bookmark" on-hold="y1=!y1;removeVideo(y1,x.id);checkY(x.id); " ng-init="y1=false" >
+			<div class="img-bookmark">
+				<div class="button-play-bookmark" ng-show="!y1"><button class="button-icon" ><i class="icon-play"></i></button></a></div>
+				<div class="button-play-bookmark" ng-show="y1"><button class="button-icon" ><i class="ion-checkmark-round" style="font-size: 1.5em;color: red;"></i></button></div>
+				<img ng-src="{{x.mobiconnector_feature_image.mobiconnector_large || 'img/no_images.png'}}" >
+			</div>
+			<div class=""><p ng-bind-html="x.title.rendered"></p></div>
+		</div>
+	</div>
+</div>
+<div class="col absolute" style="text-align:center; top:200px" ng-show="countvideo.length == 0 || include == ''">
+	<span style="font-size: 19px; color: #a2a2a2;"><i class="icon-bookmark"></i>{{'nobookmark' | translate}}</span>
+</div>

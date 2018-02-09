@@ -1,0 +1,12 @@
+.rate-item{
+	padding: 20px;
+	margin-left: 5px;
+}
+.rate .popup-container input{
+	width: 10%;
+}
+.rate .item{
+	border-width: 0px;
+	background: inherit;
+	font-size: 0.9em;
+}

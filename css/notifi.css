@@ -1,0 +1,36 @@
+.notification{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 90%;
+	height: auto;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.notifi-time{
+	border-left: 1px solid black;
+	padding-left: 10px;
+	padding-top: 15px;
+}
+.allow-notifi .item{
+	background: none !important;
+	border:none;
+}
+.allow-notifi .item-toggle .toggle{
+	top: 5px;
+}
+/*------------------------pushNotification-------------------------*/
+.push-notifi{
+	padding-top: 10px !important;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.push-notifi .checkbox input:before, .checkbox-icon:before{
+	border-radius: 0px;
+	width: 28px;
+	height: 28px;
+}
+.bar-notifi .checkbox input:before, .checkbox-icon:before{
+	border-radius: 0px;
+	width: 28px;
+	height: 28px;
+}

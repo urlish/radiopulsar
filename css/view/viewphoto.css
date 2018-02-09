@@ -1,0 +1,22 @@
+.view-photo{
+	background: #3d3d3d;
+}
+.view-photo img{
+	margin-top: 60%;
+	width: 100%;
+	height: auto;
+}
+.caption{
+	background: #0f0f0f;
+	padding:10px 10px;
+	margin-top: 30%;
+}
+.caption h4{
+	color: white;
+}
+.caption {
+	color: white;
+}
+.caption span{
+	opacity: 0.5;
+}

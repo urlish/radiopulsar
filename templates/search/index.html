@@ -1,0 +1,34 @@
+<ion-view style="background:#f7f7f7">
+	<form class="no-margin item-input-inset input-search bar bar-header" ng-submit="search()">
+			<i class="icon-arrow light" style="padding-right:10px;opacity: 0.8" ui-sref="app.home"></i>
+			<label class="item-input search">
+				<input type="text" id="search" placeholder="{{'searchPeople' | translate}}" ng-model="s.q" ng-focus="focus=true" ng-blur="focus=false" focus-me="true" style="border-bottom: none !important" ng-enter= "search()">
+			</label>
+			<button class="button button-clear icon-search button-light buttons-right" id="button-search" ng-click="search()" ></button>
+		</form>
+	<ion-content class="search has-header">
+		<div class="recent-search" >
+			<ul ng-hide="s.q">
+				<li><p>{{'recentSearch' | translate}}<span ng-click="deleteSearch()">{{'clear' | translate}}</span></p></li>
+				<li ng-repeat="y in $storage.search track by $index " ng-if="$index>0">
+				<a ng-href="#app/details/{{y.id}}" ng-bind-html="y.name" ng-if="y.format=='standard' || y.format=='video'"></a>
+				<a ng-href="#app/slidebox/{{y.id}}" ng-bind-html="y.name" ng-if="y.format=='gallery' || y.format=='image'"></a>
+				</li>		
+			</ul>
+		</div>
+		<div class="result-search" ng-show="s.q">
+			<ul>
+				<li ng-repeat="x in data " ng-click="addRecentSearch(x.title.rendered,x.id,x.format)"><i class="icon-search"></i>
+				<a ng-href="#app/details/{{x.id}}" ng-bind-html="x.title.rendered" ng-if="x.format=='standard' || x.format=='video'"></a>
+				<a ng-href="#app/slidebox/{{x.id}}" ng-bind-html="x.title.rendered" ng-if="x.format=='gallery' || x.format=='image'"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="no-result" ng-show="c1">
+			<p>{{'noResults' | translate}}</p>
+		</div>
+		<div class="no-result" ng-show="keyR">
+			<p>{{'keyword' | translate}}</p>
+		</div>
+		<ion-infinite-scroll ng-if="!over && c" on-infinite="loadMore()"></ion-infinite-scroll>
+	</ion-content>

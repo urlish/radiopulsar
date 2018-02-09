@@ -1,0 +1,62 @@
+.button-sign{
+	background: #007ebf;
+	color: white;
+}
+/*-------------------SignIn-----------------------*/
+.signin{
+	padding-top:40%;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.signin span{
+	color: #009788;
+	margin-top: 10px;
+	display: block;
+}
+.signin input[type="text"]{
+	width: 100%;
+	height: auto;
+	padding-top: 20px;
+}
+.signin input[type="email"]{
+	width: 100%;
+	height: auto;
+	padding-top: 20px;
+}
+.signin input[type="password"]{
+	width: 100%;
+	height: auto;
+	padding-top: 20px;
+}
+.popup-title{
+	color: #000;
+}
+/*------------------SignUp--------------------*/
+.signup{
+	padding: 10% 5%;
+}
+.signup span{
+	color: #009788;
+	display: block;
+	margin-top: 20px;
+}
+.signup input[type="email"]{
+	width: 100%;
+	height: auto;
+	padding-top: 10px;
+}
+.signup input[type="password"]{
+	width: 100%;
+	height: auto;
+	padding-top: 10px;
+}
+.signup input[type="text"]{
+	width: 100%;
+	height: auto;
+	padding-top: 10px;
+}
+.signup p{
+	text-align: center;
+	padding-top: 10px;
+}

@@ -1,0 +1,42 @@
+<div class="slide-box" ng-repeat="y in dataGallery | limitTo:1" ng-if="y">
+    <div>
+        <a ng-href="#app/slidebox/{{y.id}}"><img ng-src={{y.mobiconnector_feature_image.mobiconnector_large}}></a>
+        <a ng-href="#app/slidebox/{{x.id}}"><img ng-src="img/no_images.png" ng-if="y.mobiconnector_feature_image.mobiconnector_large==null"></a>
+    </div>
+     <div class="row padding">
+        <a ng-href="#app/slidebox/{{y.id}}" style="width:100%;"><h4 style="margin:0" ng-bind-html="y.title.rendered"></h4></a>
+    </div>
+	<div class="start-slideshow" style="width:100%; text-align:center">
+		<a ng-href="#app/slidebox/{{y.id}}">
+			<button class="button-icon"><i class="icon-slideshowimage"></i><span>{{'slide' | translate}}</span></button>
+		</a>
+	</div>
+</div>
+<div class="photo-post">
+    <!--<div class="item-photo-post" ng-repeat="x in maxPhoto" ng-if="x.format=='image'">
+        <div ng-if="x.mobiconnector_feature_image.mobiconnector_large!=null">
+            <a ng-href="#app/slidebox/{{x.id}}"><img ng-src={{x.mobiconnector_feature_image.mobiconnector_large}}></a>
+        </div>
+        <div ng-if="x.mobiconnector_feature_image.mobiconnector_large==null">
+            <a ng-href="#app/slidebox/{{x.id}}"><img ng-src="img/no_images.png"></a>
+        </div>
+        <div class="title">
+            <a ng-href="#app/slidebox/{{x.id}}"><h4 ng-bind-html="x.title.rendered"></h4></a>
+        </div>
+    </div>-->
+   <div class="row" style="flex-wrap:wrap">
+        <div ng-repeat="x in topImage" class="col col-50 " style="display:inline-block;">
+            <div ng-if="x.mobiconnector_feature_image.mobiconnector_large!=null">
+                <a ng-href="#app/slidebox/{{x.id}}"><img ng-src={{x.mobiconnector_feature_image.mobiconnector_large}}></a>
+            </div>
+            <div ng-if="x.mobiconnector_feature_image.mobiconnector_large==null">
+                <a ng-href="#app/slidebox/{{x.id}}"><img ng-src="img/no_images.png"></a>
+            </div>
+            <div class="title">
+                <a ng-href="#app/slidebox/{{x.id}}"><h4 ng-bind-html="x.title.rendered"></h4></a>
+            </div>
+        </div>
+    </div>
+</div>
+<ion-infinite-scroll ng-if="!over" on-infinite="loadMore()">
+</ion-infinite-scroll>

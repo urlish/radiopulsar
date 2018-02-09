@@ -1,0 +1,23 @@
+<ion-view title="Profile">
+<ion-nav-bar class="bar-stable no-border">
+<ion-nav-buttons side="left"><button class="button button-clear icon-arrow" ui-sref="app.home"></button></ion-nav-buttons>
+</ion-nav-bar>
+<ion-content>
+<div class="profile">
+	<div class="icon-profile" ng-click="getPicture()" >
+	<div class="image-profile" >
+		<img ng-src={{imageProfile}} ng-if="imageProfile!=false" >
+	</div>
+	<i class="icon-avata" ng-if="imageProfile == false"></i>
+	<div class="edit-avata"><i class="icon-edit"></i></div>
+	</div>
+	<form name="profile">
+		<span class="full-name">{{'fullname' | translate}}</span>
+		<input type="text" ng-model="y.fullname"></input>
+		<span style="margin-left: 80%">{{y.fullname.length}}/50</span>
+		<button class="button-block button button-sign" ng-click="updateProfile();changeFullName()">{{'save' | translate}}</button>
+	</form>
+	<p><span ui-sref="app.changeemail">{{'changeEmail' | translate}}</span><span style="padding:0px 10px;">|</span><span ui-sref="app.changepass">{{'changePassword' | translate}}</span></p>
+</div>
+</ion-content>
+</ion-view>

@@ -1,0 +1,42 @@
+<ion-view>
+<ion-header-bar class="bar-home bar-stable">
+    <div class="buttons buttons-right">
+		<button class="button button-clear icon-navicon " menu-toggle="left"></button>
+	</div>
+	<div class="title title-bar">{{'title' | translate}}</div>
+	<div class="buttons buttons-right">
+        <button class="button button-clear icon-search " ui-sref="app.search" style="padding-right: 10px"></button>
+        <button class="button button-clear icon-categories" menu-toggle="right" ng-click="d.c = true"></button>
+    </div>
+</ion-header-bar>
+<ion-tabs class="tabs-background-stable home">
+  <ion-tab title="{{'latest' | translate}}"><ion-pane>
+    <ion-content class="padding" ng-controller="postCtrl">
+		<ion-refresher pulling-icon="ion-refresh" on-refresh="doRefresh()" spinner="none"></ion-refresher>
+		<div class="text-center padding" ng-show="refreshing"><ion-spinner></ion-spinner></div>
+		<div class="latest" ng-include="'templates/tab/latest.html'"></div>
+    </ion-content></ion-pane>
+  </ion-tab>
+  <ion-tab title="{{'feature' | translate }}"><ion-pane>
+    <ion-content class="padding" ng-controller="featureCtrl">
+		<ion-refresher pulling-icon="ion-refresh" on-refresh="doRefresh()" spinner="none"></ion-refresher>
+		<div class="text-center padding" ng-show="refreshing"><ion-spinner></ion-spinner></div>
+		<div class="feature" ng-include="'templates/tab/feature.html'" ></div>
+    </ion-content>
+  </ion-pane></ion-tab>
+  <ion-tab title="{{'video'|translate}}"><ion-pane>
+    <ion-content class="padding" ng-controller="videoCtrl">
+		<ion-refresher pulling-icon="ion-refresh" on-refresh="doRefresh()" spinner="none"></ion-refresher>
+		<div class="text-center padding" ng-show="refreshing"><ion-spinner></ion-spinner></div>
+		<div class="video" ng-include="'templates/tab/video.html'"></div>
+    </ion-content>
+  </ion-pane></ion-tab>
+  <ion-tab title="{{'photo' | translate}}"><ion-pane>
+    <ion-content class="" ng-controller="photoCtrl">
+		<ion-refresher pulling-icon="ion-refresh" on-refresh="doRefresh()" spinner="none"></ion-refresher>
+		<div class="text-center padding" ng-show="refreshing"><ion-spinner></ion-spinner></div>
+		<div class="photo" ng-include="'templates/tab/photo.html'"></div>
+    </ion-content>
+  </ion-pane></ion-tab>
+</ion-tabs>
+</ion-view>

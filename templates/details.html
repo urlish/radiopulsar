@@ -1,0 +1,75 @@
+<ion-view>
+    <div class="book-mark" ng-show="booked1"><span>{{textBook}}</span></div>
+    <div class="bar bar-header bar-stable bar-details">
+        <button class="button button-clear icon-arrow" ng-click="comeBack()"></button>
+        <div class="title"></div>
+        <div class="buttons buttons-right">
+            <button class="button icon-share button-clear" ng-click="share()"></button>
+            <button class="button icon-bookmark button-clear" ng-click="bookmark()" ng-class="{bookedmark:booked}" ng-click="bookmark()"></button>
+            <button class="button  icon-textsize button-clear " ng-click="showTextSize()"></button>
+        </div>
+    </div>
+    <!--    <ion-nav-bar class="bar bar-stable">
+            <ion-nav-buttons side="left"><button class="button icon-arrow button-clear" ng-click="goback()"></button></ion-nav-buttons>
+            <ion-nav-buttons side="right"><button class="button icon-share button-clear" ng-click="share()"></button></ion-nav-buttons>
+            <ion-nav-buttons side="primary"><button class="button icon-bookmarks button-clear" ng-class="{bookedmark:booked}" ng-click="bookmark()"></button></ion-nav-buttons>
+            <ion-nav-buttons side="secondary"><button class="button  icon-textsize button-clear" ng-click="showTextSize()"></button></ion-nav-buttons>
+        </ion-nav-bar> -->
+    <ion-content class="content-details has-header" ng-show="detailsData.date_gmt" on-scroll="test()" on-drag="onDrag($event)">
+        <div class="details-post">
+         <div class="feature-details" style="padding-bottom:  15px">
+                <img ng-src={{detailsData.mobiconnector_feature_image.mobiconnector_large}} ng-if="detailsData.mobiconnector_feature_image!=null">
+            </div>
+            <div class="title">
+                <h3><a ng-href="#app/details/{{id}}" ng-bind-html="detailsData.title.rendered"></a></h3>
+            </div>
+            <div class="info-post">
+                <h4><span class="author">{{'by' | translate}} {{detailsData.mobiconnector_author_name}}, </span><span class="time-before">{{detailsData.date_gmt | datePost}}</span></h4>
+                <span class="total-view">{{detailsData.mobiconnector_total_views}}<i class="icon-view"></i></span><span class="total-comment" style="padding-left: 10px">{{detailsData.mobiconnector_total_comments.total_comments}}<i class="icon-comment"></i></span>
+            </div>
+           
+            <detail class="content-post" id="details" content="detailsData.content.rendered"></detail>
+            <p style="padding: 10px;text-align: center;">{{'thisis' | translate}}<a style="color: blue" ng-href="#app/comment/{{id}}">{{totalCommnet}}</a> COMMENTS</p>
+            <a ng-href="#app/comment/{{id}}">
+                <button class="button button-block login-email button-sign">{{'addcomment' | translate}}</button>
+            </a>
+        </div>
+        <div class="clear"></div>
+        <div class="recent-posts has-footer">
+            <div ng-repeat="x in dataIncategory" class="parent-recent">
+                <div class="item-recent-post" ng-if="x.format=='video' || x.format=='standard'">
+                    <div class="img-recent" ng-if="x.mobiconnector_feature_image==null">
+                        <a ng-href="#app/details/{{x.id}}"><img src="img/no_images.png " ></a>
+            </div>
+            <div class="img-recent " ng-if="x.mobiconnector_feature_image!=null ">
+                <a ng-href="#app/details/{{x.id}} "><img ng-src={{x.mobiconnector_feature_image.mobiconnector_large}} ></a>
+            </div>
+            <div class="title-recent ">
+                <a ng-href="#app/details/{{x.id}} "><h4 ng-bind-html="x.title.rendered "></h4></a>
+            </div>
+        </div>
+        <div class="item-recent-post " ng-if="x.format=='image' || x.format=='gallery' ">
+            <div class="img-recent " ng-if="x.mobiconnector_feature_image==null ">
+            <a ng-href="#app/slidebox/{{x.id}} "><img src="img/no_images.png "></a>
+                    </div>
+                    <div class="img-recent " ng-if="x.mobiconnector_feature_image!=null ">
+                        <a ng-href="#app/slidebox/{{x.id}} "><img ng-src={{x.mobiconnector_feature_image.mobiconnector_large}}></a>
+                    </div>
+                    <div class="title-recent ">
+                        <a ng-href="#app/slidebox/{{x.id}} "><h4 ng-bind-html="x.title.rendered "></h4></a>
+                    </div>
+                </div>
+                <div class="clear " ng-if="($index+1) % 2==0"></div>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="!over" on-infinite="loadMore()"></ion-infinite-scroll>
+    </ion-content>
+    <a class="button button-icon icon ion-home back-home"  ui-sref="app.home"></a>
+  <!--   <div class="bar bar-footer footer-details ">
+        <div class="row ">
+            <div class="col col-33 " ng-click="comeBack() "><i class="icon-back "></i></div>
+            <div class="col col-33 " style="text-align: center; " ui-sref="app.home "><i class="icon-home "></i></div>
+            <div class="col col-33 " style="text-align: right; " ng-click="scrollTop() "><i class="icon-backtotop "></i></div>
+        </div>
+    </div> -->
+</ion-view>

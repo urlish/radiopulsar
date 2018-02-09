@@ -1,0 +1,18 @@
+<<ion-view title="Forgot Passwords">
+<ion-nav-bar class="bar-stable">
+<ion-nav-buttons side="left"><button class="button button-clear icon-arrow" ui-sref="app.signin"></button></ion-nav-buttons>
+</ion-nav-bar>
+<ion-content>
+	<div class="forgotpass">
+		<form name="changepass">
+			<p>{{'confirmfoforgot' | translate}}</p>
+			<span style="color:red" ng-show="changepass.email.$invalid || show" class="span-erorr">{{'emailInvalid' | translate}}</span>
+			<!-- <p style="color:red;margin-top:10px" ng-show="showError">Please fill this field</p>
+			<p style="color:red;margin-top:10px" ng-show="forgot.error">Acount is not found! please check your acount!</p> -->
+			<button class="button button-block button-sign" ng-click="forgotPass()" ng-disabled="changepass.$invalid">{{'resetLink' | translate}}</button>
+<!-- 			<p style="color:red;margin-top:30px;text-align:center" ng-show="forgot.sucess">Succes! check your email!</p>
+ -->
+		</form>
+	</div>
+</ion-content>
+</ion-view>

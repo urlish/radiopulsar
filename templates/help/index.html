@@ -1,0 +1,20 @@
+<ion-view>
+<link rel="stylesheet" type="text/css" href="css/help.css">
+<ion-nav-bar class="bar-stable">
+<ion-nav-buttons side="left"><button class="icon-arrow button button-clear" ui-sref="app.home"></button></ion-nav-buttons>
+<ion-nav-title>{{'help' | translate}}</ion-nav-title>
+</ion-nav-bar>
+<ion-content>
+<div class="hlep">
+	<div class="item-help" ui-sref="app.faq">
+		<p>{{'faq' | translate}}</p>
+	</div>
+	<div class="item-help" ui-sref="app.term">
+		<p>{{'term' | translate}}</p>
+	</div>
+	<div class="item-help" ng-click="rateApp()">
+		<p>{{'rateapp' | translate}} </p>
+	</div>
+</div>
+</ion-content>
+</ion-view>

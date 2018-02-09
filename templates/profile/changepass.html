@@ -1,0 +1,19 @@
+<<ion-view title="{{'changepass' | translate}}">
+<ion-nav-bar class="bar-stable">
+<ion-nav-buttons side="left"><button class="button button-clear icon-arrow" ui-sref="app.profile" ></button></ion-nav-buttons>
+</ion-nav-bar>
+<ion-content>
+	<div class="changepass">
+		<form name="changepass">
+			<input type="password" ng-model="x.passCurrent" placeholder="{{'currentPassword' | translate}}" ng-minlength="1" ng-change="change1(x.passCurrent)" ></input>
+			<span  ng-show="show5" class="span-erorr">{{'passwordInvalid' | translate}}</span>
+			<input type="password" ng-model="x.newPass" placeholder="{{'newPass' | translate}}" ng-minlength="1" ng-change="checkConfirm();change3(x.newPass)"></input>
+			<span  ng-show="show1 || checkpass" class="span-erorr">{{'passwordInvalid' | translate}}</span>
+			<input type="password" ng-model="x.confirmPass" placeholder="{{'confirmPass' | translate}}" ng-change="checkConfirm();change4(x.confirmPass)"></input>
+			<span  ng-show="show2 || checkpass" class="span-erorr">{{'passwordInvalid' | translate}}</span>
+			<button class="button button-block button-sign" ng-click="changePass()" ng-disabled="changepass.$invalid">{{'update' | translate}}</button>
+		</form>
+		<p style="text-align: center;color: #d0d4d7;margin-top: 20px" ui-sref="app.forgotpass">{{'forgotPassWord' | translate}}</p>
+	</div>
+</ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view title="{{'changemail' | translate}}">
+<ion-nav-bar class="bar-stable">
+<ion-nav-buttons side="left"><button class="button button-clear icon-arrow" ui-sref="app.profile"></button></ion-nav-buttons>
+</ion-nav-bar>
+<ion-content>
+	<div class="changemail">
+		<form name="myForm">
+			<input type="email" ng-model="x.emailChange" placeholder="{{'newEmail' | translate}}" name="email" ng-change="change2(x.emailChange)"></input>
+			<span  ng-show="show || myForm.email.$invalid" class="span-erorr">{{'emailInvalid' | translate}}</span>
+			<input type="password" ng-model="x.curretpass" placeholder="{{'currentPassword' | translate}}" ng-change="change(x.curretpass,$scope.show4)"></input>
+			<span  ng-show="show4" class="span-erorr">{{'passwordInvalid' | translate}}</span>
+
+			<button class="button button-block button-sign" ng-click="changeEmail()">{{'change'|translate}}</button>
+		</form>
+	</div>
+</ion-content>
+</ion-view>

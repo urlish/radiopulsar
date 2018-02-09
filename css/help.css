@@ -1,0 +1,24 @@
+.item-help{
+	padding-top: 10px;
+	border-bottom: 1px solid #d7d7d7;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+/*-------------------FAQ---------------------*/
+.faq{	
+	padding-top: 30px;
+}
+.title-faq{
+	padding-left: 20px;
+}
+.item-faq{
+	padding-top: 20px;
+	padding-left: 30px;
+	padding-right: 20px;
+}
+/*----------------------term--------------------*/
+.item-term{
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}

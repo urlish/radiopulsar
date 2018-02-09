@@ -1,0 +1,83 @@
+<ion-side-menus enable-menu-with-back-views="true" >
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-content class="menu-left">
+            <div class="info-user item" ng-click="goProfile()" menu-toggle="left">
+                <div class="avata" ng-if="imageProfile!=false && imageProfile!=undefined  ">
+                    <img ng-src={{imageProfile}}>
+                </div>
+                <div class="no-avata" ng-if="imageProfile==false || imageProfile==undefined">
+                    <img src="img/no_avata.png"></img>
+                </div>
+                <div class="userName" ng-if="imageProfile!=undefined"><span>{{displayName}}</span><i class="icon-edit"></i></div>
+                <div class="emailUser" ng-click=""><span>{{emailUser}}</span></div>
+            </div>
+            <div class="menu-item">
+                <div class="row menu-left-top">
+                    <div class="menu-left-item col col-33" ui-sref="app.bookmark" menu-toggle="left">
+                        <div class="icon-menu"><i class="icon icon-bookmarks"></i></div>
+                        <div>
+                            <p>{{'bookmark' | translate}}</p>
+                        </div>
+                    </div>
+                    <div class="menu-left-item col col-33 menu-left-center" menu-toggle="left" ng-click="showTextSize()">
+                        <div class="icon-menu" ng-click="" "><i class="icon-textsize " ></i></div>
+            <div><p>{{'textsize' | translate}}</p></div>
+          </div>
+           <div class="menu-left-item col-33 " menu-toggle="left " ui-sref="app.notification ">
+            <div class="icon-menu " ng-click=" " ><i class="icon icon-pushnotification " ></i></div>
+            <div><p>{{'pushnotification' | translate}}</p></div>
+          </div>
+        </div>
+        <div class="row menu-left-bottom ">
+          <div class="menu-left-item col " ng-click="share()">
+            <div class="icon-menu " ><i class="icon icon-share "></i></div>
+            <div><p>{{'share' | translate}}</p></div>
+          </div>
+           <div class="menu-left-item col menu-left-center " menu-toggle="left " ui-sref="app.help ">
+            <div class="icon-menu " ng-click="fnc() " ><i class="icon icon-help "  ></i></div>
+            <div><p>{{'help' | translate}}</p></div>
+          </div>
+           <div class="menu-left-item col " ng-click="signIn() " menu-toggle="left " ng-if="!dataUser ">
+            <div class="icon-menu "  ><i class="icon icon-login "></i></div>
+            <div><p>{{'login' | translate}}</p></div>
+          </div>
+           <div class="menu-left-item col "  ng-click="showLogOut() " menu-toggle="left " ng-if ="dataUser ">
+            <div class="icon-menu "  ><i class="icon icon-logout "></i></div>
+            <div><p>{{'logout' | translate}}</p></div>
+          </div>
+          
+        </div>
+    </div>
+    </div>
+    </ion-content>
+  </ion-side-menu>
+  <!---////////////////Menu-Right///////////////////////////////-->
+  <ion-side-menu side="right">
+    
+      <ion-header-bar class="bar bar-stable" ng-if="d.c">
+        <div class="title ">{{'category' | translate}}</div>
+       </ion-header-bar>
+       <ion-header-bar class="bar bar-light" ng-if="!d.c">
+        <div class="title"><span>#</span><a ng-bind-html="dataCate.name"></a></div>
+       </ion-header-bar>
+      <ion-content class="has-header"> 
+		   <div class="row category-main " ng-if="d.c" menu-toggle="right">
+			 <div class="col col-50 category-item " ui-sref="app.categories({idCategory:x.id})"  ng-repeat="x in dataCategory |limitTo:length:1 | orderBy " ng-if="x.parent==0" menu-toggle="right">
+				<img ng-src={{x.mobiconnector_avatar}} style="height:101px">
+				<p ng-bind-html="x.name "></p>
+			 </div>
+			
+		   </div> 
+		   <div class="category-main " menu-toggle="right " ng-if="!d.c">
+			 <div class="category-item1 " menu-toggle="left " ng-repeat="x in childCategory ">
+				<a ng-href="#app/categories/{{x.id}}">
+					<div >{{x.name}}</div>
+				</a>
+			 </div>
+		   </div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

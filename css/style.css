@@ -1,0 +1,548 @@
+/* Empty. Add your own CSS if you like */
+
+@font-face {
+    font-family: robotoSlab_bold;
+    src: url('../font/Roboto-Bold_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: robotoSlab_regular;
+    src: url('../font/RobotoSlab-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: robotoSlab_medium;
+    src: url('../font/Roboto-Medium_0.ttf') format('truetype');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: robotoSlab_medium;
+    margin-top: 0!important
+}
+
+/*p,
+span {
+    font-family: robotoSlab_regular;
+}*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.span-erorr {
+    font-size: 0.6em;
+    color: red;
+}
+
+.clear {
+    clear: both;
+}
+
+.no-border {
+    border: none!important;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.post span {
+    opacity: 0.7;
+    padding-right: 5px;
+    color:  #007ebf;
+}
+
+.button-arrow {
+    padding-left: 13px !important;
+}
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
+h4 {
+    font-size: 1em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+span {
+    font-size: 0.8em;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+.icon-view {
+    font-size: 1.3em !important;
+}
+
+.icon-comment {
+    font-size: 1.1em !important;
+}
+.menu-left .item {
+    background-color: #007ebf;
+    border-color: #007ebf;
+    color:#fff;
+}
+
+/*--------------------------Custom-textSize-----------------*/
+
+.fontsmall {
+    font-size: 16px !important;
+}
+
+.fontnormal {
+    font-size: 17px !important;
+}
+
+.fontlarge {
+    font-size: 18px !important;
+}
+
+.fontextra {
+    font-size: 19px !important;
+}
+
+
+/*---------------------------Popup-Button----------------*/
+
+.popup-buttons {
+    padding-bottom: 0px !important;
+}
+
+.popup-buttons button {
+    background: none !important;
+    color: #18abfb !important;
+    font-weight: bold;
+}
+
+.popup {
+    background: #fff !important;
+    border-radius: 5px !important;
+}
+
+.button.active,
+.button.activated {
+    border-color: #fff !important;
+}
+
+.popup-head {
+    border-bottom: none !important;
+}
+
+
+/*---------------------------tab-home-----------------*/
+
+.home .tab-item.tab-item-active,
+.tab-item.active,
+.tab-item.activated {
+    opacity: 1;
+    background: #fcfcfc;
+    font-weight: bold;
+    color: #000;
+}
+.tab-item{
+    opacity: 1;
+    height: 102% !important;
+}
+.home .tabs {
+    background: #007ebf;
+    border-style: none;
+    color: #fff !important;
+}
+
+.bar-stable {
+    background-color: #006aa0 !important;
+}
+
+.bar.bar-stable .title {
+    color: #fff !important;
+}
+
+.bar-stable .button.button-clear {
+    color: #fff;
+}
+
+.tab-title {
+    font-size: 1em !important;
+    font-family: robotoSlab_medium;
+}
+
+.nav-bar-title {
+    font-size: 1em !important;
+}
+
+
+/*-------------------Menu-Left-----------------*/
+
+.avata {
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.no-avata {
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.avata img {
+    border-radius: 100%;
+}
+
+.icon-menu {
+    padding-bottom: 5px;
+}
+
+.icon-menu i {
+    font-size: 30px;
+    color: #777777;
+}
+
+.menu-left-item {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu-left-top {
+    border-bottom: 1px solid #dee1ee;
+}
+
+.menu-left-bottom {
+    border-bottom: 1px solid #dee1ee;
+}
+
+.menu-left-center {
+    border-left: 1px solid #dee1ee;
+    border-right: 1px solid #dee1ee;
+}
+
+.info-user {
+    background: #007ebf;
+}
+
+.emailUser {
+    font-size: 0.8em;
+}
+
+.userName {
+    padding-top: 10px;
+}
+
+
+/*---------------------Menu-right----------------------*/
+
+.menu-right {
+    background: #f7f7f7;
+}
+
+.bar-search {
+    background: #fff !important;
+}
+
+.bar-search h4 {
+    text-align: left !important;
+    margin-left: 40px !important;
+    opacity: 0.7;
+}
+
+.recent-search,
+.result-search {
+    margin-left: 10px;
+}
+
+.recent-search ul li {
+    padding-bottom: 5px;
+}
+
+.result-search ul li {
+    padding-bottom: 10px;
+}
+
+.result-search i {
+    margin-right: 10px;
+}
+
+.search-menuright {
+    padding: 20px;
+}
+
+.search-menuright span {
+    opacity: 0.6;
+}
+
+.no-result p {
+    text-align: center;
+    padding-top: 50%;
+}
+
+.categories {
+    padding-bottom: 20px;
+    padding: 10px;
+}
+
+.category-main {
+    flex-wrap: wrap;
+}
+.category-main1 {
+    background: #fff;
+    padding-top: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.category-item {
+    display: inline-flex;
+    width: 44%;
+    float: left;
+    overflow: visible;
+    position: relative;
+}
+
+.category-item p {
+    position: absolute;
+    color: #fff;
+    top: 10px;
+    left: 10px;
+}
+.child-category{
+    padding: 10px;
+}
+.category-item1 {
+    padding: 10px;
+}
+
+/*---------------------Post------------------*/
+
+.main-content {
+    top: 93px !important;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+.post {
+    overflow: hidden;
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 10px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.title-post {
+    width: 55%;
+    height: auto;
+    float: left;
+}
+
+.title-post h4 {
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.img-post {
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 45%;
+    height: auto;
+    float: left;
+}
+
+
+/*--------------------latest-post--------------------*/
+
+.toppost .title-post-standard {
+    width: 100%;
+}
+
+.toppost .img-post-standard {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.toppost h4 {
+    font-size: 1.2em;
+    margin-top: 5px !important;
+}
+
+.title-post-standard {
+    float: right;
+    width: 55%;
+    padding-right: 5px;
+}
+
+.img-post-standard {
+    float: right;
+    width: 45%;
+}
+
+.post-full-image {
+    padding-top: 10px;
+}
+
+.expert {
+    padding-top: 10px;
+}
+
+.latest-slide {}
+
+.play-slide {
+    position: absolute;
+    top: 120px;
+    left: 30%;
+}
+
+.play-slide button {
+    background: #6e684a;
+    opacity: 0.8;
+    padding: 5px 5px;
+    border-radius: 15px;
+    border: 1px solid white;
+}
+
+.play-slide span {
+    color: white;
+    opacity: 1!important;
+}
+
+.play-slide i {
+    color: white;
+}
+
+
+/*---------------Feature--------------*/
+
+.feature-no-image {
+    border-bottom: 1px solid #cecece;
+}
+
+
+/*---------------Post-Video---------------*/
+
+.post-video {
+    position: relative;
+}
+
+.post-video .title {
+    font-size: 1em;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.post-video p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.img-video {
+    position: relative;
+}
+
+.button-play button {
+    position: absolute;
+    background: #94956f;
+    opacity: 0.8;
+    bottom: 10%;
+    left: 20px;
+    border-radius: 10%;
+    padding: 5px 10px;
+}
+
+.button-play i {
+    color: white;
+}
+
+
+/*---------------Post-PhoTo-------------*/
+
+.slide-box {
+    padding-top: 10px;
+    border-bottom: 1px solid #cecece;
+    position: relative;
+}
+
+.item-photo-post {
+    float: left;
+    padding: 4px;
+    width: 49%;
+    min-height: 70%;
+    max-height: 70%;
+}
+
+.start-slideshow {
+    position: absolute;
+    top: 37%;
+}
+
+.start-slideshow i {
+    color: white;
+}
+
+.start-slideshow button {
+    background: #6e684a;
+    padding: 8px 10px;
+    border-radius: 14px;
+    border: 1px solid white;
+    opacity: 0.8;
+}
+
+.start-slideshow span {
+    color: white;
+}
+
+
+/*----------------Recent-Post----------------*/
+
+
+/*-----------------input-custom--------------------*/
+
+input[type="email"] {
+    border-bottom: 1px solid #bdc3c7;
+}
+
+input[type="email"].ng-not-empty {
+    transition: all linear 0.5s;
+}
+
+input[type="password"] {
+    border-bottom: 1px solid #bdc3c7;
+}
+
+input[type="text"] {
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.video .title {
+    padding-top: 10px;
+}
+.relative{position:relative;}
+.absolute{position:absolute;}

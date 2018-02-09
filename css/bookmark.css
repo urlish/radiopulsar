@@ -1,0 +1,120 @@
+.bar-bookmark{
+	background: #e5e5e5 !important;
+	color: black;
+}
+.tab-bookmark .tabs{
+	background:  #e5e5e5 !important;
+}
+.bookmark-delete{
+width: 100%;
+height: 40px;
+position: absolute;
+z-index: 19;
+}
+.bookmark-delete i{
+}
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+background: #d47a73;
+border-color: white;
+}
+
+.checkbox input:before, .checkbox-icon:before{
+	background: none;
+}
+.checkbox input{
+	width: 20px;
+	height: 20px;
+}
+.checkbox input:after, .checkbox-icon:after{
+	top: 25%;
+	left: 20%;
+}
+.checkedimage img{
+	width: 90%;
+	height: auto;
+}
+/*------------------------------News-------------------------------*/
+
+.news-share{
+position: absolute;
+background: #dcdcdc;
+width:40%;
+height: auto;
+text-align: left;
+padding: 5px 10px;
+right: 0px;
+box-shadow: 3px 3px 10px #505050;
+top: 40px;
+}
+.icon-news-share{
+margin-left: 90%;
+}
+.post-aside{
+	position: relative;
+	padding-top: 10px;
+}
+.sharebook:hover{
+	border-bottom: 1px solid white;
+}.removebook:hover{
+	border-bottom: 1px solid white;
+}
+/*-----------------------------PhoTo-----------------------------*/
+
+.photo-bookmark-item{
+	width: 33%;
+	height: auto;
+	padding-right: 10px;
+	float: left;
+}
+.image-book{
+	position: relative;
+}
+.photo-bookmarks .checkbox{
+position: absolute;
+top: 0px;
+left: 0px;
+width:100%;
+height:100%
+}
+.checkbox{
+	z-index: 10;
+}
+/*-----------------------Video-----------------------------*/
+.book-video{
+	width: 50%;
+	float: left;
+	overflow: hidden;
+}
+.check-video {
+	bottom: 0px;
+	position: absolute;
+}
+.item-video-bookmark{
+	float: left;
+	position: relative;
+}
+.item-video-bookmark span{
+font-size: 0.8em;
+}
+.img-bookmark{
+	position: relative;
+}
+.button-play-bookmark button {
+	position: absolute;
+	background:#94956f;
+	bottom:15%;
+	left: 5%;
+	border-radius: 10%;
+	padding: 5px 10px;
+	color: #ffffff;
+	opacity: 0.6;
+}
+.opacity{
+	opacity: 0.6;
+}
+.opa{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 4;
+}

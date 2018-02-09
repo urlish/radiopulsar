@@ -1,0 +1,18 @@
+<div class="row"  style="flex-wrap:wrap">
+	<div class="col col-33 " ng-repeat="x in bookNews | filter: {format: 'image'} as countimg" ng-class="{checkedimage:showcheckbox}">
+		<div class=""  on-hold="showCheckBox()">
+			<div class="relative">
+				<label class="checkbox no-padding absolute" ng-show="showcheckbox">
+					<input type="checkbox" ng-model="check" ng-click="removeImage(check,x.id)">
+					<i class="ion-check"></i>
+				</label>
+				<div ng-class="{opacity:showcheckbox}">
+					<a ng-href="#app/slidebox/{{x.id}}"><img ng-src="{{x.mobiconnector_feature_image.mobiconnector_large || 'img/no_images.png'}}"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col absolute" style="text-align:center; top:200px" ng-show="countimg.length == 0 || include == ''">
+	<span style="font-size: 19px; color: #a2a2a2;"><i class="icon-bookmark"></i>{{'nobookmark' | translate}}</span>
+</div>

@@ -1,0 +1,22 @@
+<ion-view>
+<ion-nav-bar class="bar bar-stable bar-home ">
+<ion-nav-title>{{'notification' |translate }}</ion-nav-title>
+<ion-nav-buttons side="left"><button class="button icon-arrow button-clear button-arrow" ui-sref="app.notification"></button></ion-nav-buttons>
+</ion-nav-bar>
+<ion-content class="content-notifidetails">
+<div class="details-notifi">
+<div class="time-notifi">
+	<p><span>{{'time' | translate}}: {{dataNotifi.date | getTime}}</span></p>
+</div>
+<div class="notifi-user">
+	<p>{{user}}</p>
+</div>
+<div class="notifi-content">
+	<p>{{dataNotifi.body}}</p>
+</div>
+<div class="notifi-delete" ng-click="confirm(dataNotifi.id)">
+	<div style="text-align: right;"><i class="icon-detele"></i></div>
+</div>
+</div>
+</ion-content>
+</ion-view>

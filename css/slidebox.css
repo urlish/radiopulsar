@@ -1,0 +1,39 @@
+.slider-pager{
+	display: none;
+}
+.slider{
+	width: 100%;
+	height: 100%;
+	padding-top: 50%;
+}
+.caption-slide{
+	position: absolute;
+	bottom: 0px;
+	padding: 5px;
+	background: #121212;
+	width: 100%;
+	height: auto;
+}
+.caption-slide p{
+	color:#ffffff;
+}
+.caption-slide span{
+	color:#ffffff;
+}
+.caption-slide h3{
+	color: #ffffff;
+}
+.caption-slide h3{
+	padding-bottom: 10px;
+}
+.slide-share{
+	right: 10px;
+	top: 44px;
+	color: #ffffff;
+	position: absolute;
+	width: 40%;
+	height: auto;
+	text-align: left;
+	background: #222222;
+	padding: 5px 10px;
+}

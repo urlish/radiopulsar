@@ -1,0 +1,84 @@
+.content-details{
+
+}
+.content-details cite, .content-details em, .content-details i {
+    font-style: italic;
+}
+
+.content-post{
+	position: relative;
+}
+.content-post div{
+	width: 100% !important;
+	height: auto !important;
+} 
+.details-post{
+	margin-top:0px;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.content-post a {
+	color: blue !important;
+}
+.details-post .author{
+	
+}
+.info-post {
+	margin-bottom: 10px;
+}
+
+.total-view,.total-comment{
+	opacity: 0.7;
+	padding-right:0px;
+	color: #007ebf;
+}
+.time-before{
+	opacity: 0.6;
+}
+.content-post{
+	margin-top: 10px;
+}
+iframe{
+	width: 100%;
+	height: auto;
+}
+.book-mark{
+	position: fixed;
+	top:90%;
+	left: 30%;
+	background: #f0f0f0;
+	z-index: 10;
+	padding: 5px;
+}
+.bookedmark{
+	color:red !important;
+}
+.footer-details{
+	height: 50px !important;
+}
+.footer-details i{
+	font-size: 1.5em;
+}
+.back-home{
+	color: #fff;
+	background-color: #007ebf;
+	border-radius: 100%;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	padding: 0px 12px!important;
+
+}
+.content-details .button-icon{
+}
+/*-----------------------------Recent-post--------------------------*/
+.recent-posts{
+	padding :10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.parent-recent{
+width: 48%;
+}

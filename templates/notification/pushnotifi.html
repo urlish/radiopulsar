@@ -1,0 +1,39 @@
+<ion-view>
+<ion-nav-bar class="bar bar-stable bar-notifi">
+<ion-nav-title>Notification</ion-nav-title>
+<ion-nav-buttons side="left"><button class="button button-clear icon-arrow" ui-sref="app.home"></button></ion-nav-buttons>
+<ion-nav-buttons side="right"><label class="checkbox"><input type="checkbox"></input></label></ion-nav-buttons>
+</ion-nav-bar>
+<ion-content>
+<div class="push-notifi list">
+<p style="padding-left: 20px; color: blue;padding-top: 20px;padding-bottom: 20px">{{'pickalert' | translate}}</p>
+	<div class="item item-checkbox item-checkbox-right">
+		<p>{{'Stories' | translate}}</p>
+		<span style="opacity: 0.8;font-size: 12px;">{{'brekingnews' | translate}}</span>
+		<label class="checkbox">
+			<input type="checkbox"></input>
+		</label>
+	</div>
+	<div class="item item-checkbox item-checkbox-right">
+		{{'comment' | translate}}
+		<label class="checkbox">
+			<input type="checkbox"></input>
+		</label>
+	</div>
+	<div class="item item-checkbox item-checkbox-right">
+		<p>{{'dailybreif'}}</p>
+		<span style="opacity: 0.8;font-size: 12px;">{{'twiceaday' | translate}}</span>
+
+		<label class="checkbox">
+			<input type="checkbox"></input>
+		</label>
+	</div>
+	<div class="item item-checkbox item-checkbox-right">
+		{{'Magazine' | translate}}
+		<label class="checkbox">
+			<input type="checkbox"></input>
+		</label>
+	</div>
+</div>
+</ion-content>
+</ion-view>

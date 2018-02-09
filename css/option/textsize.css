@@ -1,0 +1,31 @@
+.item-radio .radio-icon{
+	left: 0px;
+}
+.item-radio input{
+	left: 0px;
+}
+.textsize span{
+	margin-left: 50px;
+}
+.textsize{
+	background: inherit;
+}
+.textsize .item{
+	border-style: none;
+}
+.textsize.item.item-radio .item-content{
+	padding-left:40px
+}
+.textsize .item.item-radio .radio-icon{
+	padding:13px 18px;
+	right:auto;
+	left:0;
+	font-size:22px
+}
+.textsize.item.item-radio .radio-icon:before{content:""}
+.textsize .item-radio input:checked + .radio-content .radio-icon:before{
+	content:"";
+}
+.popup-head h3{
+	margin-right: 45px;
+}
